@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="popup.js"></script>
+    <script defer src="background.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <style>
+      body {
+        min-width:250px;
+        padding: 3px;
+      }
+      /* #length {
+        max-width:25px;
+        display: inline-block;
+      }
+      #length, #button {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        display: inline-block;
+      } */
+    </style>
+  </head>
+  <body >
+    <h4>AY Password Manager</h4>
+    <form class="form" id="form">
+      <input type="checkbox" id="lowercase" name="lowercase" value="lowercase">
+      <label for="lowercase">Lowercase</label><br>
+      <input type="checkbox" id="uppercase" name="uppercase" value="uppercase">
+      <label for="uppercase">Uppercase</label><br>
+      <input type="checkbox" id="numbers" name="numbers" value="numbers">
+      <label for="numbers">Numbers</label><br>
+      <input type="checkbox" id="specialchar" name="specialchar" value="specialchar">
+      <label for="specialchar">Special Characters</label><br>
+      <!-- <label for="length">Length:</label>
+      <input type="text" id="length" name="length">
+      <button type="button" id="button">Generate</button> -->
+      <div class="input-group">
+        <input type="text" class="form-control"id="length" placeholder="Length" aria-label="Length" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-dark" id="generateButton" type="button">Generate</button>
+        </div>
+      </div>
+    </form>
+    <br>
+    <div class="input-group" id="password">
+      <input type="text" class="form-control" id="generatedpass" placeholder="Generated Password" aria-label="Generated Password" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button class="btn btn-dark" id="copyBtn" type="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Copied"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+          <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+          <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+        </svg></button>
+      </div>
+    </div>
+    <br>
+    <p class="bottom" align="center">Have an account? <a href="http://127.0.0.1:8000/" target="_blank" onclick="location.href = 'http://127.0.0.1:8000/authentication'">Log in here</a></p>
+
+    <!-- <div id="password">
+      <input type="text" value="" id="generatedpass">
+      <button  id="copyBtn">Copy</button>
+    </div> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
